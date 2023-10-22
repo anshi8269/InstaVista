@@ -347,11 +347,17 @@ body{
 }
 
 #merabhai{
+    align-self: baseline;
     height: fit-content;
     width: 100%;
     color: #f7f8f6;
     padding: 10px;
-    font-size: auto;
+    font-size: 7vh;
+}
+
+#merabhai span{
+    font-size:7vw;
+    color: #4f5bd5;
 }
 .inputs {
     text-align: center;
@@ -362,14 +368,17 @@ body{
     border-radius: 10px;
     margin-bottom: 1em;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
 .inputs input{
-    
+    width: 70%;
     margin-bottom: 5px;
-    padding: 10px 15px;
-    border: none;
+    padding: 15px 20px;
+    margin: 4px auto;
+    border: 2px solid #4f5bd5;
     border-radius: 10px;
 }
 
@@ -380,20 +389,29 @@ body{
 
 .icons{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .icons i{
     color: white;
-    gap: auto;
     padding: 10px 30px; 
-    font-size: 30px;
+    font-size:2.9vw;
      cursor: pointer;
 }
 
-.icons i :hover{
-    color: #4f5bd5;
+.icons .fa-google{
+ color:#34A853;
 }
+
+.icons .fa-twitter{
+    color:lightskyblue;
+   }
+
+   .icons .fa-facebook-f{
+    color:#3b5998;
+   }
+
+
 
 hr{
     width: 80%;
@@ -422,6 +440,10 @@ hr{
        font-size: auto;
     }
 
+    .cursor{
+        display: none;
+    }
+
     .firstcontainer , .secondcontainer{
         display: flex;
         flex-direction: column;
@@ -441,17 +463,25 @@ hr{
         width: 100%;
     }
 
+    .icons i{
+        font-size: 4vh;
+    }
+
     .merabhai2{
         font-family: 'Tilt Neon', sans-serif;
-        font-size: auto;
+        font-size: 7vw;
         display: block;
         width: 100%;
         height: fit-content;
         color: #f7f8f6;
         padding-top: 50%;
-        
-        
     }
+
+
+   .merabhai2 span{
+    font-size:9vh;
+    color: #4f5bd5;
+   }
 }
 
 
