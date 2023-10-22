@@ -1,34 +1,28 @@
 var arr=[
     {
-        "name" : "Shipli",
-        "song" : "New York hits",
         "dp" : "https://images.unsplash.com/photo-1532171875345-9712d9d4f65a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=715&q=80",
         "story" : "https://images.unsplash.com/photo-1532171875345-9712d9d4f65a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=715&q=80"
     },
     {
-        "name" : "Ansh Bbah",
-        "song" : "Senorita",
+       
         "dp" : "https://images.unsplash.com/photo-1584536682683-b79a8744eaa0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
         "story" : "https://images.unsplash.com/photo-1583391265517-35bbdad01209?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
     },
     {
-        "name" : "Deep Singh",
-        "song" : "Love me thoda",
+        
         "dp" : "https://images.unsplash.com/photo-1579493934830-eab45746b51b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
         "story" : "https://images.unsplash.com/photo-1581841064838-a470c740e8ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
     },
     {
-        "name" : "Vaishh_Bro",
-        "song" : "Tu thodi der",
+       
         "dp" : "https://images.unsplash.com/photo-1508812831504-1dd7fdaca93d?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=687",
         "story" : "https://images.unsplash.com/photo-1604514649606-2fdd0399de88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=927&q=80"
     },
     {
-        "name" : "Exquisite_me",
-        "song" : "Shayrana",
+       
         "dp" : "https://images.unsplash.com/photo-1513210191510-69220f40601d?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=870",
         "story" : "https://images.unsplash.com/photo-1604436553922-b8e12ec7224d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-    }
+    },
  
 
 ];
@@ -77,10 +71,7 @@ var post=[
         "song" : "Love me thoda",
         "story" : "https://images.unsplash.com/photo-1506795660198-e95c77602129?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=687",
         "dp" : "https://images.unsplash.com/photo-1558694196-a711f3d291d7?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=774"
-    },
-    
-   
- 
+    }
 
 ];
 
@@ -96,17 +87,14 @@ storyi.innerHTML=clutter;
 
 storyi.addEventListener("click" , function(dets){
     var fullscreen = document.querySelector("#full-screen")
-    var container = document.querySelector(".contain")
+    var contain= document.querySelector(".contain")
     
-    fullscreen.style.backgroundImage=`url(${arr[dets.target.id].story})`
     fullscreen.style.display="block"
-    container.style.display="none"
-
+    contain.style.display="none"
+    fullscreen.style.backgroundImage=`url(${arr[dets.target.id].story})`
     setTimeout(function(){
-        container.style.display="block"
+        contain.style.display="block"
         fullscreen.style.display="none"
-        fullscreen.style.tranform="scale(.9) "
-       
     },2000);
 
 
@@ -117,71 +105,85 @@ storyi.addEventListener("click" , function(dets){
 
 // posts javascript
 
+
+
+
+
+// post library starts
+
+var slutter=" ";
+for(var i = 0 ; i<post.length ; i++)
+{
+    console.log("hey")
+    slutter = slutter + `  <div class="post">
+    
+                        <div class="posthead">
+                            <img id="postdp" src="${post[i].dp}" alt="">
+                            <div>
+                            <div id="posttext">${post[i].name}</div>
+                            <div id="songname">${post[i].song}</div>
+                            </div>
+                            <span id="shareicon" class="material-symbols-outlined"> 
+                            more_vert
+                            </span>      
+                        </div>
+
+    
+                <div class="postcontainer">
+                    <img class="profile" id="${i}" src="${post[i].story}" alt=""  >
+                    <i  id="heart" class="fa-solid fa-heart">
+                        </i>
+                </div>
+
+ 
+
+                <div class="posttail">
+                    <span id="like" class="material-symbols-outlined">
+                        favorite
+                    </span>
+                    <i id="comment" class="fa-regular fa-comment"></i>
+                    <span id="share" class="material-symbols-outlined">
+                        send
+                    </span>
+
+                    <span id="bookmark"
+                    class="material-symbols-outlined">
+                        bookmark
+                        </span>
+                        
+                </div>
+
+   </div>`
+
+};
+
+
+var insidecard = document.querySelector(".insidecard");
+insidecard.innerHTML=slutter;
+//post library ends
+
 //like button starts
-var insidecard = document.querySelector(".insidecard")
-var heart = document.querySelector("#heart")
-var like = document.querySelector("#like")
 
-insidecard.addEventListener("dblclick" , function(){
 
-    heart.style.transform="scale(1)"
-    heart.style.opacity="9"
-    heart.style.transition=' transform ease 2s'
-    like.style.color="pink"
+insidecard.addEventListener("dblclick" , function(elem){
+    var heart = document.querySelectorAll("#heart")
+    var like = document.querySelectorAll("#like")
+    var ied = elem.target.id;
+    
+    heart[ied].style.transform="scale(1)"
+    heart[ied].style.opacity="9"
+    heart[ied].style.transition='transform ease 2s'
+    like[ied].style.color="pink"
+
     setTimeout(function() {
-        heart.style.opacity="0"
-        heart.style.transform="scale(0)"
+        heart[ied].style.opacity="0"
+        heart[ied].style.transform="scale(0)"
     }, 2000);
 });
 
 // like button ends
 
 
-
-// post library starts
-
-var slutter="";
-post.forEach(function(elem ){
-    slutter+=` <div class="post">
-                       
-    <div class="posthead">
-        <img id="postdp" src="${elem.dp}" alt="">
-        <div>
-         <div id="posttext">${elem.name}</div>
-         <div id="songname">${elem.song}</div>
-        </div>
-        <span id="shareicon" class="material-symbols-outlined"> 
-         more_vert
-         </span>      
-     </div>
-
-<div class="postcontainer">
-    <img id="profile" src="${elem.story}" alt="" >
-</div>
-
- 
-
- <div class="posttail">
-     <span id="like" class="material-symbols-outlined">
-         favorite
-      </span>
-      <i id="comment" class="fa-regular fa-comment"></i>
-      <span id="share" class="material-symbols-outlined">
-         send
-     </span>
-
-     <span id="bookmark"
-     class="material-symbols-outlined">
-         bookmark
-         </span>
-         
- </div>
-
-   </div>`
-});
-
-var container = document.querySelector(".post")
-container.innerHTML=slutter;
 
 /* cursor code */
 
@@ -200,39 +202,7 @@ main.addEventListener("mousemove" , function(e) {
 
 /*ends here */
 
-/*second container script*/
 
-var addfriend = document.querySelector("button")
-var body = document.querySelector("body")
-var card = document.querySelector(".second2container")
-var congrats = document.querySelector(".congrats")
-var bio = document.querySelector(".bio")
-
-var flag=true;
-addfriend.addEventListener("click" , function()
-{
-    if(flag==true)
-    {
-        addfriend.innerHTML = "Remove";
-        addfriend.style.backgroundColor="red"
-        card.style.backgroundImage="url(https://i.pinimg.com/originals/12/4d/e3/124de3d1b5e12f1d8fcec1685e634361.gif)"
-        congrats.innerText="Congratulation!! Now You have a Friend"
-        bio.style.opacity="0"
-        flag=false;
-    }
-    else{
-        addfriend.innerHTML = "Add Friend";
-        addfriend.style.backgroundColor="black"
-        card.style.backgroundColor=" rgba(235, 65, 226, 0.589)"
-        card.style.backgroundImage="none"
-        congrats.innerText=""
-        bio.style.opacity=""
-        flag=true;
-    }
-
-});
-
-/*ends here */
 
 /* reels script starts */
 
@@ -297,6 +267,7 @@ home.addEventListener("click", function(){
     fullscreen.style.display="none";
     
 })
+
 
 /*ends */
 
