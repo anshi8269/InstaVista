@@ -1,0 +1,457 @@
+/*Default**/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', sans-serif;
+    
+}
+
+body , html 
+    {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-size: auto;
+    }
+
+body{
+    background-color:rgb(11, 13, 14);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+/*Default**/
+
+.firstcontainer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 50px;
+    
+}
+/**Instagram head title*/
+/* cursor css start*/
+
+
+#insta,#feature{
+    text-align: center;
+    font-size: 5rem;
+    color: white;
+    padding: 10px;
+}
+
+.cursor{
+    
+    height: 45px;
+    width: 50px;
+    mix-blend-mode:color-dodge;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    transition: all linear 0.1s;
+   
+}
+/*container box**/
+  
+  .container{
+    
+    box-shadow: 2px 2px 2px 2px  #9bdaf796;
+    height: 310px;
+    width: 180px;
+    background-color:#fff;
+    border-radius: 10px;
+    position: relative;
+    border:1px solid rgb(245, 243, 243);
+    z-index: 999999;
+  }
+  /*container **/
+
+  /*Instagram header css**/
+
+  .instatitle{
+    display: flex;
+    align-items: center;
+    font-family: 'poppins', sanserif;
+    border-bottom: 1px solid rgb(247, 243, 243);
+  }
+
+.instatitle p , .instatitle span , .instatitle i{
+    font-size: 10px;
+    padding: 5px;
+}
+
+.instatitle span{
+    margin-left: auto;
+}
+
+/**instagram header css ends */
+
+/*instagram story css starts*/
+.card{
+
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color:#fff;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 10px;
+  
+}
+
+.card::-webkit-scrollbar{
+    display: none;
+}
+
+.storyi{
+    
+    color: #f7f8f6;
+    padding: 2px 5px 5px 5px;
+    height: 40px;
+    width: 100%;
+    cursor:pointer;
+    
+}
+
+.story
+{   
+    color: blue;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden; 
+    margin:2px;
+}
+
+.story img{
+    background-Image: linear-gradient(#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    padding: 2px;
+    transform: scale(.9) ;
+      transition:  all ease-in-out 2s;
+    height: 50px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+   
+}
+
+#full-screen{
+      display: none;
+      border-radius: 10px;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height:100% ;
+      width: 100%;
+      
+}
+
+.contain-fullscreen{
+    display: none;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    border: 1px solid rgb(247, 243, 243);
+    overflow-y: scroll; 
+}
+
+.contain-fullscreen video{
+    overflow-y: scroll;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.contain-fullscreen::-webkit-scrollbar{
+    display: none;
+}
+
+/*instagram story css ends*/
+
+/* post css starts*/
+
+.container .insidecard{
+    display: block;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    border: 1px solid rgb(247, 243, 243);
+    overflow-y: scroll; 
+}
+
+.insidecard::-webkit-scrollbar{
+    display: none;
+}
+
+.insidecard .posthead{
+    padding-left: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 25px;
+    width: 100%;
+    background-color: #FFF;
+    
+}
+
+.posthead #postdp{
+    padding: 1px;
+    width: 20px;
+    height: 80%;
+    border-radius: 50%;
+    background-image: linear-gradient(#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+}
+
+#posttext{
+   
+    font-size:7px;
+    font-weight: 800;
+    margin-left: 4px;
+}
+
+#songname{
+   
+    width: 100%;
+    font-size: 5px;
+    margin-left: 5px;
+
+}
+
+#shareicon{
+    margin-left: auto;
+    font-size: 12px;
+}
+
+/*post header ends*/
+
+
+/* inside card starts*/
+
+
+
+.insidecard #profile{
+    height: 140px;
+    width: 98%;
+    position: relative;
+    object-fit:cover;
+    object-position: center;
+    z-index: 1;
+    
+}
+
+ .insidecard #heart{
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    z-index: 2;
+    font-size: 45px;
+    opacity: 0;
+
+}
+
+.postcontainer{
+    height: 150px;
+    width: 100%;
+}
+
+.posttail{
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.posttail span,.posttail i{
+    font-size: 13px;
+    padding: 2px;
+}
+
+#comment{
+    font-size: 10px;
+}
+
+#bookmark{
+    margin-left: auto;
+}
+
+/* inside card ends*/
+
+
+/* tailnavbar starts*/
+
+#tailnavbar{
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    color:black;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    margin-left: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px;
+}
+
+#tailnavbar i{
+    padding: 10px;
+    font-size: 12px;
+}
+
+/** container ends*/
+
+.lines{
+    font-size: small;
+    position: relative;
+    padding: 2px 10px 2px 10px;
+    color:rgb(11, 13, 14);
+}
+.secondcontainer{
+    width: 50%;
+}
+
+.container2{
+    
+    height: 100%;
+    width: 100%;
+    position: relative;
+    
+}
+
+.logincard{
+    text-align: center;
+    padding: 2rem;
+    width:100%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+#merabhai{
+    height: fit-content;
+    width: 100%;
+    color: #f7f8f6;
+    padding: 10px;
+    font-size: auto;
+}
+.inputs {
+    text-align: center;
+    color: white;
+    padding: 1em;
+    border:none ;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input{
+    
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+.login-button{
+  display: block;
+  
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons i{
+    color: white;
+    gap: auto;
+    padding: 10px 30px; 
+    font-size: 30px;
+     cursor: pointer;
+}
+
+.icons i :hover{
+    color: #4f5bd5;
+}
+
+hr{
+    width: 80%;
+}
+
+.login-button button{
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;color: white;
+    border-radius: 2px;
+    background-Image: linear-gradient(#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    cursor: pointer;
+}
+
+.merabhai2{
+    display: none;
+}
+@media screen and ((min-width:100px) and (max-width:550px)) ,((min-height:900px) and  (min-width:900px)) {
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        justify-content: space-evenly;
+        align-items: center;
+       font-size: auto;
+    }
+
+    .firstcontainer , .secondcontainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+    }
+
+    #merabhai , .lines{
+        display: none;
+       
+    }
+
+    .inputs input{
+        width: 100%;
+    }
+
+    .merabhai2{
+        font-family: 'Tilt Neon', sans-serif;
+        font-size: auto;
+        display: block;
+        width: 100%;
+        height: fit-content;
+        color: #f7f8f6;
+        padding-top: 50%;
+        
+        
+    }
+}
+
+
