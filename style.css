@@ -488,6 +488,8 @@ hr{
         font-family: 'Tilt Neon', sans-serif;
         font-size: 7vw;
         display: flex;
+        justify-content:center;
+        align-items:center;
         flex-direction: column;
         width: 100%;
         height: fit-content;
