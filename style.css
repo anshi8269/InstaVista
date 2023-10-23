@@ -402,13 +402,13 @@ body{
 
 hr{
     text-align-center;
-    width:50%;
+    width:100%;
 }
 
 .icons{
-    width:70%;
+    width:100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 .icons i{
