@@ -401,7 +401,8 @@ body{
 }
 
 hr{
-    width:80%;
+    text-align-center
+    width:50%;
     text-align:center;
 }
 
