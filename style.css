@@ -400,6 +400,11 @@ body{
   
 }
 
+hr{
+    width:80%;
+    text-align:center;
+}
+
 .icons{
     display: flex;
     justify-content: space-between;
